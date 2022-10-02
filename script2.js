@@ -41,7 +41,6 @@ function pass_focus() {
     change_properties(3);
 }
 function pass_focusout() {
-    validity(3);
     back_to_default(3);
 }
 
@@ -67,36 +66,4 @@ function email_otp_focus() {
 }
 function email_otp_focusout() {
     back_to_default(6);
-}
-
-
-
-function validity(i) {
-    const chars = /[a-z]/g;
-    const CHARS = /[A-Z]/g;
-    const nums = /[0-9]/g;
-    const symbols = /[\.\-\!\@\,]/g;
-    let x = document.getElementsByTagName("input")[i].value;
-
-    if(x,length < 6 && x.length > 16);
-
-
-    if (x != "") {
-        console.log(chars.test(x));
-        console.log(CHARS.test(x));
-        console.log(nums.test(x));
-
-
-        console.log(symbols.test(x));
-
-        // if (chars.test(x) && CHARS.test(x) && nums.test(x) && symbols.test(x))
-        // {  
-        //     console.log("valid");
-        //     document.getElementById("pass-info").innerText = "Strong";
-        //     document.getElementById("pass-info").style.color = "Green";
-        // }
-        // else
-        // console.log("invalid");
-
-    }
 }
