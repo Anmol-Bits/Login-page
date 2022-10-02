@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="form-body">
+        <div></div>
+        <form action="">
+            <h1>Sign in</h1>
+            <div class="flex">
+                <div>
+                    <span class="text-inside-input" onclick="email_focus()">Email or Phone</span>
+                </div>
+                <input type="email" onfocus="email_focus()" onfocusout="email_focusout()">
+            </div>
+            <a href="#" class="forgot" class="link">Forgot email?</a>
+
+
+            <div class="flex">
+                <div>
+                    <span class="text-inside-input" onclick="pass_focus()">Password</span>
+                </div>
+                <input type="password" onfocus="pass_focus()" onfocusout="pass_focusout()">
+            </div>
+            <a href="#" class="forgot" class="link">Forgot Password?</a>
+
+
+            <button class="btn">Sign in</button>
+            <a href="/create.html" class="link">Create account</a>
+
+        </form>
+        <div></div>
+    </div>
+
+    <script src="validate.js"></script>
+    <script src="script1.js"></script>
+</body>
+
+</html>

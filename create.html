@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body{
+            height: 140vh;
+        }
+
+        .inside-flex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #otp-btn {
+            position: absolute;
+            width: 30%;
+            border-radius: 5px;
+            padding: 15px 10px;
+            outline: none;
+            border: none;
+            right: 0;
+        }
+
+        .otp-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        .sub-container {
+            position: relative;
+        }
+
+        .otp-input {
+            width: 100%;
+        }
+
+        #divider {
+            margin: 20px 0px;
+            width: 100%;
+            height: 2px;
+            background-color: #e9e9e9;
+        }
+
+        .mobile-email{
+            width: 65%;
+        }
+
+
+        @media only screen and (max-width:500px){
+            #otp-btn {
+                position:static;
+                margin-left: 20px;
+            }
+            
+            form{
+                border: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="form-body">
+        <form action="">
+
+            <h1>Create Account</h1>
+            <!-- NAME -->
+
+            <div class="flex">
+                <div>
+                    <span class="text-inside-input" onclick="name_focus()">Full Name</span>
+                </div>
+                <input type="text" onfocus="name_focus()" onkeypress="return /[a-z]/i.test(event.key)" onfocusout="name_focusout()">
+            </div>
+
+            <!-- NAME -->
+
+
+
+            <!-- MOBILE -->
+
+            <div class="flex">
+                <div class="inside-flex">
+                    <div>
+                        <span class="text-inside-input" onclick="mobile_focus()">Mobile</span>
+                    </div>
+                    <input class="mobile-email" type="text" onkeypress="return /[0-9]/i.test(event.key)" onfocus="mobile_focus()" onfocusout="mobile_focusout()">
+                    <button id="otp-btn" class="btn">Verify</button>
+                </div>
+            </div>
+
+            <!-- MOBILE -->
+
+
+
+            <!-- EMAIL -->
+
+            <div class="flex">
+                <div class="inside-flex">
+                    <div>
+                        <span class="text-inside-input" onclick="email_focus()">Email</span>
+                    </div>
+                    <input class="mobile-email" type="email" onfocus="email_focus()" onfocusout="email_focusout()">
+                    <button id="otp-btn" class="btn">Verify</button>
+                </div>
+            </div>
+
+            <!-- EMAIL -->
+
+
+
+            <!-- PASSWORD -->
+
+            <div class="flex">
+                <div>
+                    <span class="text-inside-input" onclick="pass_focus()">Password</span>
+                </div>
+                <input type="password" onfocus="pass_focus()" onfocusout="pass_focusout()">
+                <div><span id="pass-info"></span></div>
+            </div>
+
+            <!-- PASSWORD -->
+
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="flex">
+                <div>
+                    <span class="text-inside-input" onclick="conf_pass_focus()">Confirm Password</span>
+                </div>
+                <input type="password" onfocus="conf_pass_focus()" onfocusout="conf_pass_focusout()">
+            </div>
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div id="divider"></div>
+
+            <!-- OTP -->
+
+            <div class="flex">
+                <div class="otp-container">
+                    <div class="sub-container">
+                        <div>
+                            <span class="text-inside-input" onclick="mobile_otp_focus()">Mobile OTP</span>
+                        </div>
+                        <input type="text" class="otp-input" onfocus="mobile_otp_focus()"
+                            onfocusout="mobile_otp_focusout()">
+                    </div>
+                    <div class="sub-container">
+                        <div>
+                            <span class="text-inside-input" onclick="email_otp_focus()">Email OTP</span>
+                        </div>
+                        <input type="text" class="otp-input" onfocus="email_otp_focus()"
+                            onfocusout="email_otp_focusout()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTP -->
+
+            <button class="btn">Sign up</button>
+
+        </form>
+    </div>
+
+    <script src="validate.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
